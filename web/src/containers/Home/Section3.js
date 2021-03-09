@@ -63,7 +63,7 @@ const Card = ({ icon, title, text, stringId, iconId }) => (
 			<div className="card">
 				<div className="card-header">
 					<ReactSVG
-						src={icon}
+						src={typeof icon != 'undefined' ? icon : 'svg.svg'}
 						beforeInjection={(svg) => {
 							svg.classList.add('home-card-icon');
 						}}

@@ -247,8 +247,9 @@ export const MenuHollaEx = ({ size }) => {
 				}
 			} else {
 				const subMenus = menu.children.map((dropdown, index) => {
+					//console.log(dropdown);
 					return (
-						<Menu.Item>
+						<Menu.Item key={dropdown.id}>
 							{dropdown.icon} {dropdown.name}
 							<br />
 							<span className={'menu-sub-text'}>{dropdown.description} </span>
@@ -256,18 +257,18 @@ export const MenuHollaEx = ({ size }) => {
 					);
 				});
 
+				const rand = 9 + Math.random() * 8;
 				const singleMenu = (
-					<Menu theme="dark" activeKey={index}>
+					<Menu theme="dark" activeKey={rand}>
 						{subMenus}
 					</Menu>
 				);
 
 				return (
-					<Dropdown overlay={singleMenu}>
+					<Dropdown overlay={singleMenu} key={rand + 1}>
 						<a
 							className="ant-dropdown-link rb-menu"
 							onClick={(e) => e.preventDefault()}
-							key={index}
 						>
 							{menu.name} {menu.icon}
 						</a>

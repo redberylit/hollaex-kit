@@ -20,6 +20,8 @@ import { Banners } from './Banners';
 import { Section4 } from './Section4';
 import { MarketListHome } from './MarketList';
 
+import { Summary } from './Summary';
+
 const INFORMATION_INDEX = 1;
 const MIN_HEIGHT = 450;
 
@@ -142,6 +144,8 @@ class Home extends Component {
 						onClickLearnMore={this.onClickScrollTo(INFORMATION_INDEX)}
 						token={token}
 					/>
+
+					<Summary />
 
 					{/*<Section2
 						style={style}
