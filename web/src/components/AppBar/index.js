@@ -23,21 +23,6 @@ import ThemeSwitcher from './ThemeSwitcher';
 import { EditWrapper } from 'components';
 import withEdit from 'components/EditProvider/withEdit';
 import withConfig from 'components/ConfigProvider/withConfig';
-import { Dropdown, Menu, Space } from 'antd';
-import {
-	AntCloudOutlined,
-	BulbOutlined,
-	CaretDownOutlined,
-	CaretRightOutlined,
-	CodeSandboxOutlined,
-	DollarCircleOutlined,
-	FilterOutlined,
-	HeatMapOutlined,
-	RadarChartOutlined,
-	RocketOutlined,
-	ScheduleOutlined,
-	WindowsOutlined,
-} from '@ant-design/icons';
 import { MenuHollaEx } from './MenuHollaEx';
 
 class AppBar extends Component {
@@ -441,14 +426,14 @@ class AppBar extends Component {
 					'no-borders': disableBorder,
 				})}
 			>
-				<MenuHollaEx size={2} />
+				<MenuHollaEx size={0} />
 
-				<div
+				{/*<div
 					id="home-nav-container"
 					className="d-flex align-items-center justify-content-center h-100"
 				>
 					{this.renderIcon(isHome, theme)}
-				</div>
+				</div>*/}
 				{children}
 				{!isLoggedIn() && (
 					<div id="trade-nav-container">
